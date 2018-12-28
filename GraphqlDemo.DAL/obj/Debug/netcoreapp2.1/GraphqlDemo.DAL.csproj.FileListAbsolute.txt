@@ -1,0 +1,9 @@
+C:\source\GraphqlDemo\GraphqlDemo.DAL\bin\Debug\netcoreapp2.1\GraphqlDemo.DAL.deps.json
+C:\source\GraphqlDemo\GraphqlDemo.DAL\bin\Debug\netcoreapp2.1\GraphqlDemo.DAL.dll
+C:\source\GraphqlDemo\GraphqlDemo.DAL\bin\Debug\netcoreapp2.1\GraphqlDemo.DAL.pdb
+C:\source\GraphqlDemo\GraphqlDemo.DAL\obj\Debug\netcoreapp2.1\GraphqlDemo.DAL.csproj.CoreCompileInputs.cache
+C:\source\GraphqlDemo\GraphqlDemo.DAL\obj\Debug\netcoreapp2.1\GraphqlDemo.DAL.AssemblyInfoInputs.cache
+C:\source\GraphqlDemo\GraphqlDemo.DAL\obj\Debug\netcoreapp2.1\GraphqlDemo.DAL.AssemblyInfo.cs
+C:\source\GraphqlDemo\GraphqlDemo.DAL\obj\Debug\netcoreapp2.1\GraphqlDemo.DAL.dll
+C:\source\GraphqlDemo\GraphqlDemo.DAL\obj\Debug\netcoreapp2.1\GraphqlDemo.DAL.pdb
+C:\Source\GraphqlDemo\GraphqlDemo.DAL\obj\Debug\netcoreapp2.1\GraphqlDemo.DAL.csprojAssemblyReference.cache

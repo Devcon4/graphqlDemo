@@ -1,0 +1,17 @@
+C:\source\GraphqlDemo\GraphqlDemo.API\bin\Debug\netcoreapp2.1\GraphqlDemo.API.deps.json
+C:\source\GraphqlDemo\GraphqlDemo.API\bin\Debug\netcoreapp2.1\GraphqlDemo.API.runtimeconfig.json
+C:\source\GraphqlDemo\GraphqlDemo.API\bin\Debug\netcoreapp2.1\GraphqlDemo.API.runtimeconfig.dev.json
+C:\source\GraphqlDemo\GraphqlDemo.API\bin\Debug\netcoreapp2.1\GraphqlDemo.API.dll
+C:\source\GraphqlDemo\GraphqlDemo.API\bin\Debug\netcoreapp2.1\GraphqlDemo.API.pdb
+C:\source\GraphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.csprojAssemblyReference.cache
+C:\source\GraphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.csproj.CoreCompileInputs.cache
+C:\source\GraphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.RazorAssemblyInfo.cache
+C:\source\GraphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.RazorAssemblyInfo.cs
+C:\source\GraphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.AssemblyInfoInputs.cache
+C:\source\GraphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.AssemblyInfo.cs
+C:\source\GraphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.RazorTargetAssemblyInfo.cache
+C:\source\GraphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.dll
+C:\source\GraphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.pdb
+C:\Source\GraphqlDemo\GraphqlDemo.API\bin\Debug\netcoreapp2.1\GraphqlDemo.BLL.dll
+C:\Source\GraphqlDemo\GraphqlDemo.API\bin\Debug\netcoreapp2.1\GraphqlDemo.BLL.pdb
+C:\Source\GraphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.csproj.CopyComplete

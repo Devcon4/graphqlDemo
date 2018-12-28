@@ -1,0 +1,9 @@
+C:\source\GraphqlDemo\GraphqlDemo.BLL\bin\Debug\netcoreapp2.1\GraphqlDemo.BLL.deps.json
+C:\source\GraphqlDemo\GraphqlDemo.BLL\bin\Debug\netcoreapp2.1\GraphqlDemo.BLL.dll
+C:\source\GraphqlDemo\GraphqlDemo.BLL\bin\Debug\netcoreapp2.1\GraphqlDemo.BLL.pdb
+C:\source\GraphqlDemo\GraphqlDemo.BLL\obj\Debug\netcoreapp2.1\GraphqlDemo.BLL.csproj.CoreCompileInputs.cache
+C:\source\GraphqlDemo\GraphqlDemo.BLL\obj\Debug\netcoreapp2.1\GraphqlDemo.BLL.AssemblyInfoInputs.cache
+C:\source\GraphqlDemo\GraphqlDemo.BLL\obj\Debug\netcoreapp2.1\GraphqlDemo.BLL.AssemblyInfo.cs
+C:\source\GraphqlDemo\GraphqlDemo.BLL\obj\Debug\netcoreapp2.1\GraphqlDemo.BLL.dll
+C:\source\GraphqlDemo\GraphqlDemo.BLL\obj\Debug\netcoreapp2.1\GraphqlDemo.BLL.pdb
+C:\Source\GraphqlDemo\GraphqlDemo.BLL\obj\Debug\netcoreapp2.1\GraphqlDemo.BLL.csprojAssemblyReference.cache

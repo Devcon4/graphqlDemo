@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HotChocolate" Version="0.7.0-preview.17" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="0.7.0-preview.17" />
+    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="0.7.0-preview.12" />
+    <PackageReference Include="HotChocolate.AspNetCore.GraphiQL" Version="0.7.0-preview.17" />
+    <PackageReference Include="HotChocolate.AspNetCore.Playground" Version="0.7.0-preview.17" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GraphqlDemo.BLL\GraphqlDemo.BLL.csproj" />
+  </ItemGroup>
+
+</Project>
