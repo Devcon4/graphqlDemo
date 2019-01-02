@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GraphqlDemo.BLL.Feature.Message
+namespace GraphqlDemo.DAL.Entities
 {
-    public class MessageModel
+    public class Message
     {
         public int Id { get; set; }
         public string Text { get; set; }

@@ -10,4 +10,8 @@
     <PackageReference Include="HotChocolate.AspNetCore" Version="0.7.0-preview.17" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GraphqlDemo.DAL\GraphqlDemo.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

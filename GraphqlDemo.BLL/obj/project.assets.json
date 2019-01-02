@@ -1833,6 +1833,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "GraphqlDemo.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/GraphqlDemo.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GraphqlDemo.DAL.dll": {}
+        }
       }
     }
   },
@@ -2056,7 +2066,6 @@
       "sha512": "eiCP8ZbkBuisHUjLbBHblFdXUd5k5z2Wvb6+H2Lwc/wpqcH9IF0D21S87Ko+dOG1NwOGG1+zqwBHF/vx1n+PGQ==",
       "type": "package",
       "path": "microsoft.codeanalysis.analyzers/2.6.1",
-      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2126,11 +2135,10 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection/2.1.0": {
-      "sha512": "gqQviLfuA31PheEGi+XJoZc1bc9H9RsPa9Gq9XuDct7XGWSR9eVXjK5Sg7CSUPhTFHSuxUFY12wcTYLZ4zM1hg==",
+      "sha512": "gt5wZArSJyLxGqvom+0WrNcmiJurkZV0YaPC4wpeqbSVg9CEQAG6h7nQXJcqj8+6BFYB9RDey4gAZasxcxv4tw==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection/2.1.0",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
         "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
@@ -2529,11 +2537,10 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
+      "sha512": "TT+QCi9LcxGTjBssH7S7n5+8DVcwfG4DYgXX7Dk7+BfZ4oVHj8Q0CbYk9glzAlHLsSt3bYzol+fOdra2iu6GOw==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -3272,11 +3279,10 @@
       ]
     },
     "System.Diagnostics.DiagnosticSource/4.5.1": {
-      "sha512": "zCno/m44ymWhgLFh7tELDG9587q0l/EynPM0m4KgLaWQbz/TEKvNRX2YT5ip2qXW/uayifQ2ZqbnErsKJ4lYrQ==",
+      "sha512": "/tu8MfTToEdI+I0L10NkGXqGuLDIvmkWqjnaSit3o8i5SZz8A0kz9YLxfZltFKbxmsOpYqnyoysPvPlQMZVwxg==",
       "type": "package",
       "path": "system.diagnostics.diagnosticsource/4.5.1",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -4705,11 +4711,10 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.1": {
-      "sha512": "x/3d5xb+mc9e4I2GOOT+HPRWMZLbYjNN/kYKsb0fyUKcWizn/t1CIrGRLIBhv7H0ptYEt+WTTztdPmwSUMyKig==",
+      "sha512": "qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "files": [
-        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -6021,33 +6026,39 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "GraphqlDemo.DAL/1.0.0": {
+      "type": "project",
+      "path": "../GraphqlDemo.DAL/GraphqlDemo.DAL.csproj",
+      "msbuildProject": "../GraphqlDemo.DAL/GraphqlDemo.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "GraphqlDemo.DAL >= 1.0.0",
       "HotChocolate >= 0.7.0-preview.17",
       "HotChocolate.AspNetCore >= 0.7.0-preview.17",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\devyn.cyphers\\.nuget\\packages\\": {},
+    "C:\\Users\\devco\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Source\\GraphqlDemo\\GraphqlDemo.BLL\\GraphqlDemo.BLL.csproj",
+      "projectUniqueName": "C:\\Code\\graphqlDemo\\GraphqlDemo.BLL\\GraphqlDemo.BLL.csproj",
       "projectName": "GraphqlDemo.BLL",
-      "projectPath": "C:\\Source\\GraphqlDemo\\GraphqlDemo.BLL\\GraphqlDemo.BLL.csproj",
-      "packagesPath": "C:\\Users\\devyn.cyphers\\.nuget\\packages\\",
-      "outputPath": "C:\\Source\\GraphqlDemo\\GraphqlDemo.BLL\\obj\\",
+      "projectPath": "C:\\Code\\graphqlDemo\\GraphqlDemo.BLL\\GraphqlDemo.BLL.csproj",
+      "packagesPath": "C:\\Users\\devco\\.nuget\\packages\\",
+      "outputPath": "C:\\Code\\graphqlDemo\\GraphqlDemo.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\devyn.cyphers\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\devco\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6059,7 +6070,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Code\\graphqlDemo\\GraphqlDemo.DAL\\GraphqlDemo.DAL.csproj": {
+              "projectPath": "C:\\Code\\graphqlDemo\\GraphqlDemo.DAL\\GraphqlDemo.DAL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

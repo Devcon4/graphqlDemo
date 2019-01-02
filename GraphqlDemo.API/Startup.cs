@@ -4,8 +4,9 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using GraphqlDemo.BLL;
-using GraphqlDemo.BLL.Feature.Message;
-using GraphqlDemo.BLL.Feature.User;
+using GraphqlDemo.BLL.Feature.MessageGraph;
+using GraphqlDemo.BLL.Feature.UserGraph;
+using GraphqlDemo.DAL.Entities;
 using HotChocolate;
 using HotChocolate.AspNetCore;
 using HotChocolate.AspNetCore.Authorization;
@@ -52,6 +53,14 @@ namespace GraphqlDemo.API
             services.AddGraphQL(sp => Schema.Create(c =>
             {
                 c.RegisterServiceProvider(sp);
+                var assemblies = typeof(IGraphQLBase).Assembly.GetReferencedAssemblies().Select(n => Assembly.Load(n)).Append(typeof(IGraphQLBase).Assembly).ToArray();
+
+                // c.RegisterTypeByInterface<IGraphQLBase>(assemblies);
+
+                // c.RegisterType<UserModel>();
+
+                // c.RegisterType<MessageModel>();
+
                 c.RegisterType<QueryConfig>();
                 c.RegisterType<MutationConfig>();
 
@@ -72,11 +81,11 @@ namespace GraphqlDemo.API
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseMvc();
-            app.UseGraphQL();
-            app.UseGraphiQL();
-            app.UsePlayground();
+            app.UseGraphQL("/graphql");
+            app.UseGraphiQL("/graphql");
+            app.UsePlayground("/graphql");
         }
     }
 }

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
-using GraphqlDemo.BLL.Feature.Message;
-using GraphqlDemo.BLL.Feature.User;
+using GraphqlDemo.BLL.Feature.MessageGraph;
+using GraphqlDemo.BLL.Feature.UserGraph;
 using HotChocolate.Types;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,6 +13,11 @@ namespace GraphqlDemo.BLL
 {
     public class Query
     {
+    }
+    public enum IncludeType
+    {
+        Query,
+        Mutation
     }
 
     public static class IObjectTypeDescriptorExtensions
@@ -27,7 +33,11 @@ namespace GraphqlDemo.BLL
             }
         }
 
-        public static void IncludeTypeByInterface<T, U>(this IObjectTypeDescriptor c, params Assembly[] assemblies)
+        public static Expression<Func<U, object>> exp<U> (MethodInfo method, List<object> pars) where U: IResolvable {
+            return (m) => method.Invoke(m, pars.ToArray());
+        }
+
+        public static void IncludeTypeByInterface<T>(this IObjectTypeDescriptor c, IncludeType includeType, params Assembly[] assemblies)
         {
             var typesFromAssemblies =
                 assemblies.SelectMany(a => a.DefinedTypes.Where(x => x.GetInterfaces().Contains(typeof(T))));
@@ -36,15 +46,31 @@ namespace GraphqlDemo.BLL
 
             foreach (var type in typesFromAssemblies)
             {
-                var mutMethods = type.DeclaredMethods.Where(m => m.GetParameters().Any(p => p.GetType() == typeof(U))).ToList();
+                var methods = new List<MethodInfo> {};
+                
+                if(includeType == IncludeType.Mutation) {
+                    methods.AddRange(type.DeclaredMethods.Where(m => m.GetParameters().Any(p => p.GetType() == typeof(InputObjectType))));
+                } else if (includeType == IncludeType.Query) {
+                    methods.AddRange(type.DeclaredMethods.Where(m => m.GetParameters().All(p => p.GetType() != typeof(InputObjectType))));
+                }
 
-                if (mutMethods.Any())
+                if (methods.Any())
                 {
-                    foreach (var method in mutMethods)
+                    foreach (MethodInfo method in methods)
                     {
-                        fieldInfo.MakeGenericMethod(type.AsType()).Invoke(c, new object[] { method.Invoke(c, new object[] {default})});
+                        var pars = new List<object>() {};
+                        foreach (var p in method.GetParameters())
+                        {
+                            pars.Add(default);
+                        }
+
+                        var expInfo = typeof(IObjectTypeDescriptorExtensions).GetMethods().FirstOrDefault(m => m.IsGenericMethod && m.Name == "exp");
+
+                        fieldInfo.MakeGenericMethod(type.AsType()).Invoke(c, new object[] { expInfo.MakeGenericMethod(type.AsType()).Invoke(null, new object[]{ method, pars }) });
                     }
                 }
+
+
             }
         }
     }
@@ -52,7 +78,7 @@ namespace GraphqlDemo.BLL
     public class QueryConfig : ObjectType<Query> {
         protected override void Configure(IObjectTypeDescriptor<Query> descriptor) {
 
-            descriptor.IncludeTypeByInterface<IResolvable, ObjectType>(typeof(IResolvable).Assembly);
+            descriptor.IncludeTypeByInterface<IResolvable>(IncludeType.Query, typeof(IResolvable).Assembly);
         }
     }
 }
