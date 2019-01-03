@@ -10,5 +10,6 @@ namespace GraphqlDemo.DAL.Entities
         public string Name { get; set; }
         public string Title { get; set; }
         public string Phone { get; set; }
+        public List<Message> Messages { get; set; }
     }
 }

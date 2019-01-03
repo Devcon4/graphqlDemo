@@ -33,52 +33,51 @@ namespace GraphqlDemo.BLL
             }
         }
 
-        public static Expression<Func<U, object>> exp<U> (MethodInfo method, List<object> pars) where U: IResolvable {
-            return (m) => method.Invoke(m, pars.ToArray());
-        }
+        //public static Expression<Func<U, object>> Exp<U> (MethodInfo method, List<object> pars) where U: IResolvable {
+        //    return (m) => method.Invoke(m, pars.ToArray());
+        //}
 
-        public static void IncludeTypeByInterface<T>(this IObjectTypeDescriptor c, IncludeType includeType, params Assembly[] assemblies)
-        {
-            var typesFromAssemblies =
-                assemblies.SelectMany(a => a.DefinedTypes.Where(x => x.GetInterfaces().Contains(typeof(T))));
+        //public static void IncludeTypeByInterface<T>(this IObjectTypeDescriptor c, IncludeType includeType, params Assembly[] assemblies)
+        //{
+        //    var typesFromAssemblies =
+        //        assemblies.SelectMany(a => a.DefinedTypes.Where(x => x.GetInterfaces().Contains(typeof(T))));
 
-            var fieldInfo = typeof(IObjectTypeDescriptor).GetMethods().FirstOrDefault(m => m.IsGenericMethod && m.Name == "Field");
+        //    var fieldInfo = typeof(IObjectTypeDescriptor).GetMethods().First(m => m.IsGenericMethod && m.Name == "Field");
 
-            foreach (var type in typesFromAssemblies)
-            {
-                var methods = new List<MethodInfo> {};
+        //    foreach (var type in typesFromAssemblies)
+        //    {
+        //        var methods = new List<MethodInfo> {};
                 
-                if(includeType == IncludeType.Mutation) {
-                    methods.AddRange(type.DeclaredMethods.Where(m => m.GetParameters().Any(p => p.GetType() == typeof(InputObjectType))));
-                } else if (includeType == IncludeType.Query) {
-                    methods.AddRange(type.DeclaredMethods.Where(m => m.GetParameters().All(p => p.GetType() != typeof(InputObjectType))));
-                }
+        //        if(includeType == IncludeType.Mutation) {
+        //            methods.AddRange(type.DeclaredMethods.Where(m => m.GetParameters().Any(p => p.GetType() == typeof(InputObjectType))));
+        //        } else if (includeType == IncludeType.Query) {
+        //            methods.AddRange(type.DeclaredMethods.Where(m => m.GetParameters().All(p => p.GetType() != typeof(InputObjectType))));
+        //        }
 
-                if (methods.Any())
-                {
-                    foreach (MethodInfo method in methods)
-                    {
-                        var pars = new List<object>() {};
-                        foreach (var p in method.GetParameters())
-                        {
-                            pars.Add(default);
-                        }
+        //        if (methods.Any())
+        //        {
+        //            foreach (MethodInfo method in methods)
+        //            {
+        //                var pars = new List<object>() {};
+        //                foreach (var p in method.GetParameters())
+        //                {
+        //                    pars.Add(default);
+        //                }
 
-                        var expInfo = typeof(IObjectTypeDescriptorExtensions).GetMethods().FirstOrDefault(m => m.IsGenericMethod && m.Name == "exp");
+        //                var expInfo = typeof(IObjectTypeDescriptorExtensions).GetMethods().First(m => m.IsGenericMethod && m.Name == "Exp");
 
-                        fieldInfo.MakeGenericMethod(type.AsType()).Invoke(c, new object[] { expInfo.MakeGenericMethod(type.AsType()).Invoke(null, new object[]{ method, pars }) });
-                    }
-                }
-
-
-            }
-        }
+        //                fieldInfo.MakeGenericMethod(type.AsType()).Invoke(c, new object[] { expInfo.MakeGenericMethod(type.AsType()).Invoke(null, new object[]{ method, pars }) });
+        //            }
+        //        }
+        //    }
+        //}
     }
 
     public class QueryConfig : ObjectType<Query> {
-        protected override void Configure(IObjectTypeDescriptor<Query> descriptor) {
-
-            descriptor.IncludeTypeByInterface<IResolvable>(IncludeType.Query, typeof(IResolvable).Assembly);
+        protected override void Configure(IObjectTypeDescriptor<Query> descriptor)
+        {
+            descriptor.IncludeQueriesByInterface<IQueryBase>(typeof(IQueryBase).Assembly);
+            //descriptor.IncludeTypeByInterface<IResolvable>(IncludeType.Query, typeof(IResolvable).Assembly);
         }
     }
 }

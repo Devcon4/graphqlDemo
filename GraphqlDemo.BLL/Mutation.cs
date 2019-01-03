@@ -13,7 +13,8 @@ namespace GraphqlDemo.BLL
     public class MutationConfig : ObjectType<Mutation>
     {
         protected override void Configure(IObjectTypeDescriptor<Mutation> descriptor) {
-            descriptor.IncludeTypeByInterface<IResolvable>(IncludeType.Mutation, typeof(IResolvable).Assembly);
+            descriptor.IncludeQueriesByInterface<IMutationBase>(typeof(IMutationBase).Assembly);
+            //descriptor.IncludeTypeByInterface<IResolvable>(IncludeType.Mutation, typeof(IResolvable).Assembly);
         }
     }
 }

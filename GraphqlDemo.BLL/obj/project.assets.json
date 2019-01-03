@@ -2135,10 +2135,11 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection/2.1.0": {
-      "sha512": "gt5wZArSJyLxGqvom+0WrNcmiJurkZV0YaPC4wpeqbSVg9CEQAG6h7nQXJcqj8+6BFYB9RDey4gAZasxcxv4tw==",
+      "sha512": "gqQviLfuA31PheEGi+XJoZc1bc9H9RsPa9Gq9XuDct7XGWSR9eVXjK5Sg7CSUPhTFHSuxUFY12wcTYLZ4zM1hg==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection/2.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
         "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
@@ -2537,10 +2538,11 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "TT+QCi9LcxGTjBssH7S7n5+8DVcwfG4DYgXX7Dk7+BfZ4oVHj8Q0CbYk9glzAlHLsSt3bYzol+fOdra2iu6GOw==",
+      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -3279,10 +3281,11 @@
       ]
     },
     "System.Diagnostics.DiagnosticSource/4.5.1": {
-      "sha512": "/tu8MfTToEdI+I0L10NkGXqGuLDIvmkWqjnaSit3o8i5SZz8A0kz9YLxfZltFKbxmsOpYqnyoysPvPlQMZVwxg==",
+      "sha512": "zCno/m44ymWhgLFh7tELDG9587q0l/EynPM0m4KgLaWQbz/TEKvNRX2YT5ip2qXW/uayifQ2ZqbnErsKJ4lYrQ==",
       "type": "package",
       "path": "system.diagnostics.diagnosticsource/4.5.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -4711,10 +4714,11 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.1": {
-      "sha512": "qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
+      "sha512": "x/3d5xb+mc9e4I2GOOT+HPRWMZLbYjNN/kYKsb0fyUKcWizn/t1CIrGRLIBhv7H0ptYEt+WTTztdPmwSUMyKig==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -6042,23 +6046,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\devco\\.nuget\\packages\\": {},
+    "C:\\Users\\devyn.cyphers\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\graphqlDemo\\GraphqlDemo.BLL\\GraphqlDemo.BLL.csproj",
+      "projectUniqueName": "C:\\Source\\GraphqlDemo\\GraphqlDemo.BLL\\GraphqlDemo.BLL.csproj",
       "projectName": "GraphqlDemo.BLL",
-      "projectPath": "C:\\Code\\graphqlDemo\\GraphqlDemo.BLL\\GraphqlDemo.BLL.csproj",
-      "packagesPath": "C:\\Users\\devco\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\graphqlDemo\\GraphqlDemo.BLL\\obj\\",
+      "projectPath": "C:\\Source\\GraphqlDemo\\GraphqlDemo.BLL\\GraphqlDemo.BLL.csproj",
+      "packagesPath": "C:\\Users\\devyn.cyphers\\.nuget\\packages\\",
+      "outputPath": "C:\\Source\\GraphqlDemo\\GraphqlDemo.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\devco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\devyn.cyphers\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6071,8 +6075,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Code\\graphqlDemo\\GraphqlDemo.DAL\\GraphqlDemo.DAL.csproj": {
-              "projectPath": "C:\\Code\\graphqlDemo\\GraphqlDemo.DAL\\GraphqlDemo.DAL.csproj"
+            "C:\\Source\\GraphqlDemo\\GraphqlDemo.DAL\\GraphqlDemo.DAL.csproj": {
+              "projectPath": "C:\\Source\\GraphqlDemo\\GraphqlDemo.DAL\\GraphqlDemo.DAL.csproj"
             }
           }
         }

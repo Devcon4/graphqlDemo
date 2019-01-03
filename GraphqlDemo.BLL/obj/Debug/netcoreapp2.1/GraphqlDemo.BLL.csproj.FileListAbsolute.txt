@@ -19,3 +19,6 @@ C:\Code\graphqlDemo\GraphqlDemo.BLL\obj\Debug\netcoreapp2.1\GraphqlDemo.BLL.pdb
 C:\Code\graphqlDemo\GraphqlDemo.BLL\bin\Debug\netcoreapp2.1\GraphqlDemo.DAL.dll
 C:\Code\graphqlDemo\GraphqlDemo.BLL\bin\Debug\netcoreapp2.1\GraphqlDemo.DAL.pdb
 C:\Code\graphqlDemo\GraphqlDemo.BLL\obj\Debug\netcoreapp2.1\GraphqlDemo.BLL.csproj.CopyComplete
+C:\Source\GraphqlDemo\GraphqlDemo.BLL\bin\Debug\netcoreapp2.1\GraphqlDemo.DAL.dll
+C:\Source\GraphqlDemo\GraphqlDemo.BLL\bin\Debug\netcoreapp2.1\GraphqlDemo.DAL.pdb
+C:\Source\GraphqlDemo\GraphqlDemo.BLL\obj\Debug\netcoreapp2.1\GraphqlDemo.BLL.csproj.CopyComplete

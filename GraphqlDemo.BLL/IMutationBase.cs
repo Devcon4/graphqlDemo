@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GraphqlDemo.BLL
 {
-    public interface IResolvable
+    public interface IMutationBase
     {
     }
 }

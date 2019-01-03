@@ -12,6 +12,7 @@ using HotChocolate.AspNetCore;
 using HotChocolate.AspNetCore.Authorization;
 using HotChocolate.AspNetCore.Playground;
 using HotChocolate.AspNetCore.GraphiQL;
+using HotChocolate.Configuration;
 using HotChocolate.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,7 +35,11 @@ namespace GraphqlDemo.API
         {
             var typesFromAssemblies = assemblies.SelectMany(a => a.DefinedTypes.Where(x => x.GetInterfaces().Contains(typeof(T))));
             foreach (var type in typesFromAssemblies)
-                c.RegisterType(type.AsType());
+            {
+                var registerTypeInfo = typeof(ICodeFirstConfiguration).GetMethods()
+                    .First(m => m.IsGenericMethod && m.Name == "RegisterType");
+                registerTypeInfo.MakeGenericMethod(type.AsType()).Invoke(c, new object[]{});
+            }
         }
     }
     public class Startup
@@ -50,23 +55,24 @@ namespace GraphqlDemo.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // Setup GraphQL.
             services.AddGraphQL(sp => Schema.Create(c =>
             {
+                var assemblies = typeof(Startup).Assembly.GetReferencedAssemblies().Select(n => Assembly.Load(n)).Append(typeof(Startup).Assembly);
+
                 c.RegisterServiceProvider(sp);
-                var assemblies = typeof(IGraphQLBase).Assembly.GetReferencedAssemblies().Select(n => Assembly.Load(n)).Append(typeof(IGraphQLBase).Assembly).ToArray();
+                 
+                c.RegisterTypeByInterface<IModelBase>(assemblies.ToArray());
 
-                // c.RegisterTypeByInterface<IGraphQLBase>(assemblies);
+                c.RegisterQueryType<QueryConfig>();
+                c.RegisterMutationType<MutationConfig>();
 
-                // c.RegisterType<UserModel>();
-
-                // c.RegisterType<MessageModel>();
-
-                c.RegisterType<QueryConfig>();
-                c.RegisterType<MutationConfig>();
-
-                //c.RegisterTypeByInterface<IQueriable>(assemblies);
-                //c.RegisterTypeByInterface<IGraphqlable>(assemblies);
             }));
+
+            // Add Services here.
+            services.AddScoped<IMessageQueries, MessageQueries>();
+            services.AddScoped<IUserQueries, UserQueries>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -83,9 +89,10 @@ namespace GraphqlDemo.API
 
             // app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseWebSockets();
             app.UseGraphQL("/graphql");
-            app.UseGraphiQL("/graphql");
-            app.UsePlayground("/graphql");
+            app.UseGraphiQL("/graphql", "/graphiql");
+            app.UsePlayground("/graphql", "/playground");
         }
     }
 }

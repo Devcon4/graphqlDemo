@@ -34,3 +34,5 @@ C:\Code\graphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.dll
 C:\Code\graphqlDemo\GraphqlDemo.API\obj\Debug\netcoreapp2.1\GraphqlDemo.API.pdb
 C:\Code\graphqlDemo\GraphqlDemo.API\bin\Debug\netcoreapp2.1\GraphqlDemo.DAL.dll
 C:\Code\graphqlDemo\GraphqlDemo.API\bin\Debug\netcoreapp2.1\GraphqlDemo.DAL.pdb
+C:\Source\GraphqlDemo\GraphqlDemo.API\bin\Debug\netcoreapp2.1\GraphqlDemo.DAL.dll
+C:\Source\GraphqlDemo\GraphqlDemo.API\bin\Debug\netcoreapp2.1\GraphqlDemo.DAL.pdb

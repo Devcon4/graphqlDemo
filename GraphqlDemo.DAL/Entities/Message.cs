@@ -9,5 +9,6 @@ namespace GraphqlDemo.DAL.Entities
         public int Id { get; set; }
         public string Text { get; set; }
         public DateTime CreatedDateTime { get; set; }
+        public User User { get; set; }
     }
 }
